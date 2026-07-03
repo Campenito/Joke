@@ -9,21 +9,21 @@ from openai import OpenAI
 # Create your PAT token by following instructions here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
 client = OpenAI(
     base_url="https://models.github.ai/inference",
-    api_key=os.environ["GITHUB_TOKEN"],
+    api_key=os.environ.get("GITHUB_TOKEN"),
 )
 
 response = client.chat.completions.create(
     messages=[
         {
             "role": "system",
-            "content": "",
+            "content": "You are a helpful assistant that explains jokes and humor.",
         },
         {
             "role": "user",
-            "content": " Explain this joke, I was going to visit my family on May 3rd. My mom said that it was a great idea as my dad's poetry reading is that night. So now I'm flying in on May 4th"
+            "content": "Explain this joke: I was going to visit my family on May 3rd. My mom said that it was a great idea as my dad's poetry reading is that night. So now I'm flying in on May 4th instead."
         }
     ],
-    model="openai/gpt-4o-mini",
+    model="gpt-4o-mini",
     temperature=1,
     max_tokens=4096,
     top_p=1

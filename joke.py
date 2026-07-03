@@ -20,7 +20,7 @@ response = client.chat.completions.create(
         },
         {
             "role": "user",
-            "content": "What is the capital of France?",
+            "content": Tell me something new",
         }
     ],
     model="openai/gpt-4o-mini",

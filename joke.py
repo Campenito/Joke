@@ -20,7 +20,7 @@ response = client.chat.completions.create(
         },
         {
             "role": "user",
-            "content": Tell me something new",
+            "content": Tell me something new", #
         }
     ],
     model="openai/gpt-4o-mini",

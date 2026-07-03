@@ -20,7 +20,7 @@ response = client.chat.completions.create(
         },
         {
             "role": "user",
-            "content": "Tell me something new",
+            "content": "Explain this joke, I was going to visit my family on May 3rd. My mom said that it was a great idea as my dad's poetry reading is that night. So now I'm flying in on May 4th.",
         }
     ],
     model="openai/gpt-4o-mini",
